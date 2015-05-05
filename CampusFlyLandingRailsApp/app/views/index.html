@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Our Purpose</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">The Process</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Our Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+            <video id="bgvid" src="video/Drone.mp4" muted="muted" loop="loop" autoplay="autoplay"></video>
+
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading">CampusFly</h1>
+                            <img src="img/CFTransparent.png">
+                            <p class="intro-text">COMING SEPTEMBER 2015<br>TO THE UNIVERSITY OF ROCHESTER</p>
+                            <div class="row">
+                                    <button class="btn btn-default btn-lg" id="emailRegister">SIGN UP & BE THE FIRST</button>
+                                    <input type="email" class="form-control inputEmail hidden" id="exampleInputEmail3" placeholder="u.rochester.edu email">
+                                    <button type="submit" class="btn btn-primary submitEmail hidden">Submit</button>
+                            </div>
+
+                            <div class="emailSubmissionConfirm hidden">
+                                <p>
+                                Thank you for your support!<br>
+                                We are happy to hear you like our idea.
+                                </p>
+                            </div>
+
+                            <a href="#about" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <script type="text/javascript">
+            $("#emailRegister").on("click", function(){
+                $("#emailRegister").remove();
+                $(".inputEmail").removeClass("hidden");
+                $(".inputEmail").addClass("visible");
+                $(".submitEmail").removeClass("hidden");
+                $(".submitEmail").addClass("visible");
+                });
+            $(".submitEmail").on("click", function(){
+                $(this).removeClass("visible");
+                $(this).addClass("hidden");
+                $(".inputEmail").removeClass("visible");
+                $(".inputEmail").addClass("hidden");
+                $(".emailSubmissionConfirm").removeClass("hidden");
+                $(".emailSubmissionConfirm").addClass("visible");
+            });
+    </script>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>All your on-campus and off-campus events in one place!</h2>
+                <p>CampusFly makes it easy for students to view all the events going on around their campus, and makes it easier for student organizations and outside event planners to advertise their events directly to the whole campus.</p>
+                <ul class="list-inline">
+                        <li>
+                            <h4 id = "followUs">Follow Us</h4>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/campusfly.us/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/CAMPUSFLYUS"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com/CAMPUSFLY"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="col-lg-6">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/pBylvA_3OK0" frameborder="0" allowfullscreen></iframe>
+                 <!--<video width="100%" height="100%" controls>
+                    <source src="video/DDay1080.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            </div>
+
+        </div>
+    </section>
+
+<!-- Titled teh download section, but is the process section -->
+    <section id="download" class="download-section text-center">
+        <div class="container">
+            <div class="row text-center">
+                    <h2>Four simple steps:</h2>
+                    <hr class="primary"></hr>
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="service-item" id="createAccount">
+                                <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x text-primary"></i>
+                                </span>
+                                <h4>
+                                    <strong>Create your account</strong>
+                                </h4>
+                                <p>Sign-in using Facebook</p>
+                        </div> 
+                    </div>
+
+                    <div class="col-md-10 col-sm-6">
+                            <div class="row text-center">
+                                <div class="col-md-1 col-sm-6 userTitleHeading" >
+                                    <h4 class = "userTitle">
+                                            <div class = "userTitleWriting"><strong>Event Planner</strong></div>
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-calendar fa-stack-1x text-primary"></i>
+                                         </span>
+                                        <h4>
+                                            <strong>Create Your Event</strong>
+                                        </h4>
+                                        <p>Fill out our simple event submission form.</p>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                        </span>
+                                        <h4>
+                                            <strong>Publish Your Event</strong>
+                                        </h4>
+                                        <p>It's as easy as clicking a button.</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-line-chart fa-stack-1x text-primary"></i>
+                                    </span>
+                                    <h4>
+                                        <strong>Watch Your Event Grow</strong>
+                                    </h4>
+                                    <p>Now every student on campus will see your event without you paying big marketing bucks.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-1 col-sm-6 userTitleHeading">
+                                    <h4 class = "userTitle">
+                                            <div class = "userTitleWriting"><strong>Student</strong></div>
+                                    </h4>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-search fa-stack-1x text-primary"></i>
+                                        </span>
+                                        <h4>
+                                            <strong>View Events</strong>
+                                        </h4>
+                                        <p>See all events near you or filter based on your preferences.</p>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-beer fa-stack-1x text-primary"></i>
+                                        </span>
+                                        <h4>
+                                            <strong>Join an event</strong>
+                                        </h4>
+                                        <p>Purchase tickets or RSVP your attendance.</p>
+                                    </div>                                    
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-users fa-stack-1x text-primary"></i>
+                                        </span>
+
+                                        <h4>
+                                            <strong>Spread The Word!</strong>
+                                        </h4>
+                                        <p>Share the event with your friends and make it a party!</p>
+                                    </div>                                    
+                                </div>
+                            </div>                             
+                        </div>
+
+                    
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p>
+                    <a href="blog.html" class="btn btn-default btn-lg">Visit Our Blog</a>
+                </p>
+                <h2>Contact CampusFly</h2>
+                <p>Feel free to email with interest, questions, concerns, comments or to just say hello!</p>
+                <p><a href="mailto:campusflyroc@gmail.com">campusflyroc@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/campusfly.us/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/CAMPUSFLY" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; CampusFly 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
